@@ -28,12 +28,23 @@ const Testimonials = () => {
             <Swiper slidesPerView={3} 
                     slidesPerGroup={1}
                     spaceBetween={20} 
-                    className={css.tCarousel}>
+                    className={css.tCarousel}
+                    breakpoints={{
+                        856: {
+                            slidesPerView: 3
+                        },
+                        640: {
+                            slidesPerView: 2
+                        },
+                        0: {
+                            slidesPerView: 1
+                        }
+                    }}>
                 {
                     TestimonialsData.map((testimonial, i)=> (
                         <SwiperSlide>
                             <div className={css.testimonial}>
-                                <img src={testimonial.img} alt="" />
+                                <img src={testimonial.image} alt="" />
                                 <span>{testimonial.comment}</span>
                                 <hr/>
                                 <span>{testimonial.name}</span>

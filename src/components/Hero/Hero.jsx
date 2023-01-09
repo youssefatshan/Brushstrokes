@@ -8,6 +8,7 @@ import {motion} from 'framer-motion';
 const Hero = () => {
 
   const transition = {duration: 3, type: "spring "};
+  const mobile = window.innerWidth<=768? true:false;
 
   return (
     <div className={css.container}>
@@ -26,14 +27,14 @@ const Hero = () => {
         <div className={css.wrapper}>
             {/* Blue Circle */}
             <motion.div
-            initial={{bottom: "2rem"}}
+            initial={{bottom: !mobile && "2rem"}}
             whileInView={{bottom: "0rem"}} 
             className={css.blueCircle}
             transition={transition}></motion.div>
             {/* Hero Image */}
             <motion.img 
             transition={transition}
-            initial={{bottom:"-2rem"}}
+            initial={{bottom: !mobile && "-2rem"}}
             whileInView={{bottom:"0rem"}} 
             src={HeroImg} 
             alt="" 
@@ -41,8 +42,8 @@ const Hero = () => {
             {/* Cart Div Animating */}
             <motion.div
             transition={transition}
-            initial={{right: "4%"}}
-            whileInView={{right: "2%"}}
+            initial={{right: !mobile && "4%"}}
+            whileInView={{right: !mobile && "2%"}}
             className={css.cart2}>
                 <RiShoppingBagFill />
                 

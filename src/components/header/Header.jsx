@@ -9,7 +9,9 @@ const Header = () => {
 
   const [ShowMenu, setShowMenu] = useState(true)
 
-  const toggleMenu = () => setShowMenu((ShowMenu)=>!ShowMenu);
+  const toggleMenu = () => {
+    setShowMenu((ShowMenu)=>!ShowMenu);
+  }
 
   return (
     <div className={css.container}>

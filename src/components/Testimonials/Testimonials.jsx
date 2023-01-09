@@ -4,6 +4,11 @@ import Hero from '../../assets/testimonialHero.png'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { TestimonialsData } from "../../data/testimonials"
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 const Testimonials = () => {
   return (
     <div className={css.testimonials}>
@@ -43,7 +48,7 @@ const Testimonials = () => {
                 {
                     TestimonialsData.map((testimonial, i)=> (
                         <SwiperSlide>
-                            <div className={css.testimonial}>
+                            <div className={css.testimonial} key={i}>
                                 <img src={testimonial.image} alt="" />
                                 <span>{testimonial.comment}</span>
                                 <hr/>
@@ -54,8 +59,8 @@ const Testimonials = () => {
                 }
             </Swiper>
          </div>
-    </div>
+     </div>
   );
 };
 
-export default Testimonials
+export default Testimonials;

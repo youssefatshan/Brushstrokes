@@ -75,7 +75,7 @@ const Footer = () => {
             </div>
 
             <div className={css.copyRight}>
-                <span>Copyright ©2022 by Brushstrokes, Inc.</span>
+                <span>Copyright ©2022 by Mohamad Yousef Atshan</span>
                 <span>All rights reserved.</span>
             </div>
       </div>
